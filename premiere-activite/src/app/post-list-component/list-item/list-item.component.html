@@ -1,0 +1,18 @@
+	<li [ngClass]="{'list-group-item': true,
+				'list-group-item-success': onNombreOui() > onNombreNon(),
+				'list-group-item-danger' : onNombreOui() < onNombreNon()}">
+		<font size="5"><strong>{{titlePost}} :</strong></font>
+		 <label class="pull-right">{{ created_at | date : 'short' }}</label><br/>
+		{{content}}<br/><br/>
+		<!--ici je cree un evenement qui va augementer le nombre de "oui" a chaque clique"-->
+		<button class="btn btn-success" (click) = "onNombreOui()">
+		love it
+		</button>
+		<!--ici je cree un evenement qui va augementer le nombre de "Non" a chaque clique"-->
+		<button class="btn btn-danger" (click) ="onNombreNon()">
+		don't love it
+		</button>
+		<button class="btn btn-danger pull-right" (click) = "onRemovePost()">
+		suppression
+		</button> 
+	</li>
