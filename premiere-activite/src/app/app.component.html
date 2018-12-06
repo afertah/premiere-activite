@@ -2,11 +2,14 @@
 <h1 style="text-align:center">
 		Bienvenue sur {{ title }}!
 </h1>	
-<app-header></app-header>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<router-outlet></router-outlet>
+				<h2>Posts</h2>
+				<ul class="list-group">
+				<!--ici je cree une boucle ngFor pour parcourir tout le tableau que j'ai cree sur le typescipte c'est pour eviter les repetition-->
+					<app-post-list-component ></app-post-list-component>
+				</ul> 
 			</div>
 		</div>
 	</div>

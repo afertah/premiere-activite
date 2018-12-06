@@ -1,8 +1,4 @@
-<h2> Posts: </h2>
-<ul class="list-group">	
-<app-list-item *ngFor="let post of posts; let i = index"
+<app-list-item *ngFor="let post of posts"
 					[titlePost] = "post.title"
 					[created_at] = "post.create"
-					[index] = "i"	
 					[content] = "post.contenu"></app-list-item>
-</ul> 
